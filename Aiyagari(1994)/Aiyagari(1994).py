@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Replication of Huggett(1994)
+Replication of Aiyagari(1994)
 
 @author: Taiki Ono
 """
@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 from functools import partial
 from scipy.optimize import bisect
 from scipy.sparse import csr_matrix, csc_matrix, coo_matrix, lil_matrix, linalg
-from quantecon.optimize import root_finding
 from Tauchen import tauchen_approximation
 import time
 from tqdm import tqdm
@@ -113,7 +112,6 @@ def VFI(c0,v0,util,eps=1e-3, diff=1, itermax=300):
     Solving Bellman equation via Value Function Iteration
     ---------------------------------------------------------------------------
     <input>
-    ・ model: Huggett class
     ・ c0 : initial guess of policy function(na-by-nl)
     ・ v0 : initial guess of value function(na-by-nl)
     ・ util: utility matrix(na-by-na-by-nl)
